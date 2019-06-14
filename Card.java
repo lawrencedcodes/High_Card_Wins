@@ -1,8 +1,9 @@
+import java.util.Random;
 public class Card {
-    public static final int Ace = 1;
-    public static final int Jack = 11;
-    public static final int Queen = 12;
-    public static final int King = 13;
+    public static final int ACE = 1;
+    public static final int JACK = 11;
+    public static final int QUEEN = 12;
+    public static final int KING = 13;
     public static final int CLUBS = 1;
     public static final int DIAMONDS = 2;
     public static final int HEARTS = 3;
@@ -47,9 +48,7 @@ public class Card {
             s = "Hearts";
         } else if (suit == SPADES) {
             s = "Spades";
-        } else if (suit == CLUBS) {
-            s = "Clubs";
-        }
+        } else s = "Clubs";
         return v + " of " + s;
     }
     private int value;

@@ -22,7 +22,7 @@ public class CardDeck {
     public void shuffle() {
         int next;
         for (next=0; next<cards-1; next++) {
-            int r = new IntStream(next, cards-1).draw();
+            int r = new RandomIntGenerator(next, cards-1).draw();
             Card temp = deck[next];
             deck[next] = deck[r];
             deck[r] = temp;
@@ -30,11 +30,10 @@ public class CardDeck {
     }
 
     public Card draw() {
-        if (cards==0) {
-            return null;
-            cards--;
-            return deck[cards];
+        if (cards==0) return null; {
+            cards--;  
         }
+        return deck[cards];
     }
 
     public void play(int rounds) {
